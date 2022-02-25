@@ -1,0 +1,40 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 80vh;
+  margin: 0;
+  padding: 0 50px;
+  overflow-y: scroll;
+}
+
+.flex-container img {
+  object-fit: cover;
+  min-height: 300px;
+  width: 300px;
+  height: 300px;
+  margin: 15px;
+}
+
+img {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+img[loading] {
+  opacity: 0;
+}
+
+/* Small */
+@media (max-width: 660px) {
+  .flex-container {
+    padding: 0;
+  }
+  .flex-container img {
+    width: 80%;
+    height: auto;
+    margin: 15px;
+  }
+}

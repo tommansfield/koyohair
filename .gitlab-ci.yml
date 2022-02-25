@@ -1,0 +1,93 @@
+stages:
+  - dependencies
+  - build
+  - dockerize
+  - deploy
+
+variables:
+  APP_NAME: "koyohair"
+  NAMESPACE: "sites"
+  URL: "koyohair.com"
+  SUBDOMAIN: "{subdomain:[a-z]+}"
+
+📚 Dependencies:
+  stage: dependencies
+  image: node:12-alpine
+  script:
+    - echo "Downloading dependencies..."
+    - npm install
+    - echo "Dependencies downloaded successfully."
+  only:
+    - master
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules
+
+🔨 Build: 
+  stage: build
+  image: node:12-alpine
+  script:
+    - echo "Compiling the code..."*
+    - npm run build
+    - echo "Compile complete."
+  only:
+    - master
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/dist
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules
+    policy: pull
+
+🐳 Dockerize:
+  stage: dockerize
+  image: docker:latest
+  before_script:
+    - cd kube
+    - echo "Preparing Dockerfile..."
+    - sed -i "s|'{{APP_NAME}}'|$APP_NAME|g" ./Dockerfile
+    - echo "Dockerfile prepared."
+  script:
+    - echo "Creating docker image.."
+    - cd ..
+    - docker build -t localhost:8082/$APP_NAME:latest -f ./kube/Dockerfile .
+    - echo "Docker image created."
+    - echo "Logging into Nexus..."
+    - docker login -u ${NEXUS_USER} -p ${NEXUS_PASS} localhost:8082
+    - echo "Login successful."
+    - echo "Pushing image..."
+    - docker push localhost:8082/$APP_NAME:latest
+    - echo "Image successfully pushed."
+  only:
+    - master
+
+🚀 Deploy:
+  stage: deploy
+  image: 
+    name: aliartiza75/kubectl:0.0.2
+    entrypoint: [""]
+  before_script:
+  - mkdir ~/.kube/
+  - echo $KUBE_CONFIG | base64 -d > config
+  - mv config ~/.kube/
+  - echo "Preparing deployment.yaml..."
+  - cd kube
+  - sed -i "s|'{{APP_NAME}}'|$APP_NAME|g" ./deployment.yaml
+  - sed -i "s|'{{NAMESPACE}}'|$NAMESPACE|g" ./deployment.yaml
+  - sed -i "s|{{URL}}|$URL|g" ./deployment.yaml
+  - sed -i "s|{{SUBDOMAIN}}|$SUBDOMAIN|g" ./deployment.yaml
+  - echo "Deployment prepared."
+  script:
+    - echo "Deploying application..."
+    - '[ -z "$(kubectl get namespaces | grep $NAMESPACE)" ] && kubectl create namespace ${NAMESPACE}'
+    - kubectl apply -f ./deployment.yaml
+    - kubectl scale deploy $APP_NAME --namespace $NAMESPACE --replicas=0
+    - kubectl scale deploy $APP_NAME --namespace $NAMESPACE --replicas=1
+    - echo "Application successfully deployed."

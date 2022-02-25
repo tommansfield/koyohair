@@ -1,0 +1,94 @@
+<nav class="navbar navbar-expand-custom navbar-dark bg-dark">
+  <a
+    class="navbar-brand green"
+    id="main"
+    routerLink="home"
+    (click)="closeMenu()"
+    ><span>KOY</span>O</a
+  >
+  <button
+    class="navbar-toggler order-first"
+    type="button"
+    (click)="isMenuOpen ? closeMenu() : openMenu()"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="social" id="social-small">
+    <a href="{{ facebookUrl }}"
+      ><img src="../../assets/images/facebook.png"
+    /></a>
+    <a href="{{ instagramUrl }}"
+      ><img src="../../assets/images/instagram.png"
+    /></a>
+  </div>
+  <div
+    class="collapse navbar-collapse order-last"
+    [ngClass]="{ show: isMenuOpen }"
+  >
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="gallery"
+          routerLink="gallery"
+          routerLinkActive="green"
+          (click)="closeMenu()"
+          >GALLERY</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="gallery"
+          routerLink="stylists"
+          routerLinkActive="green"
+          (click)="closeMenu()"
+          >STYLISTS</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="prices"
+          routerLink="prices"
+          routerLinkActive="green"
+          (click)="closeMenu()"
+          >PRICES</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="colour"
+          routerLink="colour"
+          routerLinkActive="green"
+          (click)="closeMenu()"
+          >COLOUR SERVICES</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="colour"
+          routerLink="info"
+          routerLinkActive="green"
+          (click)="closeMenu()"
+          >SALON INFO</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="mail" href="mailto:info@koyohair.com"
+          >CONTACT</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="social order-last" id="social-big">
+    <a href="https://www.facebook.com/koyohairtruro"
+      ><img src="../../assets/images/facebook.png"
+    /></a>
+    <a href="https://www.instagram.com/koyohairtruro/"
+      ><img src="../../assets/images/instagram.png"
+    /></a>
+  </div>
+</nav>

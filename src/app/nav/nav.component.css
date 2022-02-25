@@ -1,0 +1,90 @@
+.navbar {
+  height: 65px;
+}
+
+.navbar-toggler {
+  margin-left: 10px;
+}
+
+.nav-item {
+  margin: 0 0.5em;
+}
+
+.nav-item > a:hover {
+  color: #73ffd1 !important;
+}
+
+.navbar-brand {
+  margin: 0 1rem;
+  font-family: "Racing Sans One", cursive;
+  font-size: 1.8em;
+}
+
+.navbar-brand span {
+  letter-spacing: 0.8rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+.social img {
+  height: 35px;
+  width: 35px;
+  margin: 5px 10px 5px 5px;
+}
+
+/* Big */
+@media (min-width: 788px) {
+  #social-big {
+    display: flex;
+  }
+  #social-small {
+    display: none;
+  }
+  .navbar-expand-custom {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand-custom .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand-custom .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .navbar-expand-custom .navbar-collapse {
+    display: flex !important;
+  }
+  .navbar-expand-custom .navbar-toggler {
+    display: none;
+  }
+}
+
+/* Medium */
+@media (max-width: 920px) and (min-width: 787px) {
+  .navbar-collapse {
+    justify-content: center;
+  }
+  .navbar-nav .nav-link {
+    font-size: 1.7vw;
+    padding: 0 0.5vw !important;
+  }
+}
+
+/* Small */
+@media (max-width: 787px) {
+  .nav-item {
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    padding: 5px 10px;
+  }
+  #social-big {
+    display: none;
+  }
+  #social-small {
+    display: flex;
+  }
+}
