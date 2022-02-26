@@ -10,7 +10,7 @@ a:hover {
 /* Small */
 @media (max-width: 600px) {
   h4 {
-    margin-top: 20px !important;
+    margin-top: 25px !important;
   }
   .text {
     padding: 0;
