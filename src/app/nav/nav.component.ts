@@ -11,13 +11,11 @@ export class NavComponent implements OnInit {
   public facebookUrl: string;
   public instagramUrl: string;
 
-  constructor() {
+  public ngOnInit(): void {
     this.isMenuOpen = false;
     this.facebookUrl = environment.facebookUrl;
     this.instagramUrl = environment.instagramUrl;
   }
-
-  ngOnInit(): void {}
 
   public openMenu() {
     if (!this.isMenuOpen) {

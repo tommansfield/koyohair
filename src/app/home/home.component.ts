@@ -6,10 +6,10 @@ import { environment } from '../../environments/environment';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   public booksyUrl: string;
 
-  constructor() {
+  public ngOnInit(): void {
     this.booksyUrl = environment.booksyUrl;
   }
 }
