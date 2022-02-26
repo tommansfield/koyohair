@@ -22,6 +22,6 @@ export class GalleryComponent implements OnInit {
   }
 
   public fadeInImage(element: HTMLElement): void {
-    element.removeAttribute('loading');
+    setTimeout(() => element.removeAttribute('loading'), 200);
   }
 }
