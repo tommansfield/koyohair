@@ -11,7 +11,7 @@
   width: 90%;
   margin: 20px;
   max-width: 500px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   border: none;
 }
 
@@ -22,10 +22,6 @@
 
 .card-header {
   background-color: rgb(33, 37, 41);
-}
-
-.card-text {
-  margin-bottom: 30px;
 }
 
 .card img {
@@ -55,4 +51,11 @@
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+/* Small */
+@media (max-width: 800px) {
+  .card-text {
+    margin-bottom: 25px;
+  }
 }
