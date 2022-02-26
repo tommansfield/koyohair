@@ -56,6 +56,6 @@
 /* Small */
 @media (max-width: 800px) {
   .card-text {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 }
