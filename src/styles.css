@@ -81,7 +81,7 @@ body {
 }
 
 .filled-button {
-  background-color: rgba(115, 255, 209, 0.5);
+  background-color: rgba(115, 255, 209, 0.4);
   color: rgb(33, 37, 41);
   font-weight: 500;
   border: 2px solid rgb(33, 37, 41);
