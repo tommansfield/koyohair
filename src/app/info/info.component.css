@@ -15,4 +15,7 @@ a:hover {
   .text {
     padding: 0;
   }
+  .last {
+    margin-top: 35px !important;
+  }
 }
