@@ -18,7 +18,7 @@
 }
 
 .nav-item > a:hover {
-  color: #73ffd1 !important;
+  color: var(--orange)
 }
 
 .navbar-brand {
