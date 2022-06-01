@@ -23,12 +23,20 @@
 
 .navbar-brand {
   margin: 0 1rem;
-  font-family: "Racing Sans One", cursive;
-  font-size: 1.8em;
+  padding-bottom: 0.5em;
+  font-size: 1.5em;
 }
 
-.navbar-brand span {
+/* .navbar-brand span {
   letter-spacing: 0.8rem;
+} */
+
+.navbar-brand img {
+  width: 5em;
+}
+
+.green {
+  color: var(--orange) !important;
 }
 
 .social {
@@ -40,7 +48,7 @@
 .social img {
   height: 35px;
   width: 35px;
-  margin: 5px 10px 5px 5px;
+  margin: 5px 10px;
 }
 
 /* Big */

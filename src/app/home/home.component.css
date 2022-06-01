@@ -19,8 +19,9 @@ h1 {
 .blurb {
   color: lightgrey;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
   padding: 0 20px;
   margin: 20px 0;
   text-align: center;
@@ -42,7 +43,7 @@ h1 {
 /* Small */
 @media (max-width: 600px) {
   .blurb {
-    font-size: 1em;
+    font-size: 1.5em;
     padding: 0 10px;
   }
 }

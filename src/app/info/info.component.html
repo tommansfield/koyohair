@@ -1,7 +1,23 @@
 <div class="content">
   <div class="darkened">
     <h1>Salon Info</h1>
-    <h4 class="mt-5 mb-2s">Opening Hours</h4>
+    <h4 class="my-3">Find us</h4>
+    <div class="map-container">
+      <agm-map
+        class="map"
+        [latitude]="lat"
+        [longitude]="lng"
+        [zoom]="zoom"
+        [disableDefaultUI]="false"
+      >
+        <agm-marker [latitude]="lat" [longitude]="lng" [label]="label">
+          <agm-info-window>
+            <strong>Koyo</strong>
+          </agm-info-window>
+        </agm-marker>
+      </agm-map>
+    </div>
+    <h4 class="mt-5 mb-2">Opening Hours</h4>
     <p class="text mt-0">
       Tuesday-Saturday: 10-5<br />
       (Early mornings, late nights, Sundays and Mondays coming in June!)
@@ -10,8 +26,7 @@
     <p class="text m-0">
       Please note that due to being situated in an old hay loft, the salon is
       only accessible via stairs.
-    </p>
-    <p class="text">
+      <br />
       If you have mobility issues or any other concerns, please don't hesitate
       to
       <a href="mailto:info@koyohair.com">contact us</a>. <br />If there's any

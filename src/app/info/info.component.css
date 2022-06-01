@@ -7,6 +7,21 @@ a:hover {
   text-decoration: underline;
 }
 
+.darkened {
+  overflow-y: scroll;
+  max-width: 90vw;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+}
+
+.map {
+  width: min(300px, 70vw);
+  height: min(300px, 70vw);
+}
+
 /* Small */
 @media (max-width: 600px) {
   h4 {
@@ -18,4 +33,5 @@ a:hover {
   .last {
     margin-top: 30px !important;
   }
+
 }

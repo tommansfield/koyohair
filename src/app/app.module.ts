@@ -11,6 +11,7 @@ import { PricesComponent } from './prices/prices.component';
 import { ColourComponent } from './colour/colour.component';
 import { InfoComponent } from './info/info.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,9 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     RoutingModule,
     HttpClientModule,
     LazyLoadImageModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyChU4JDZXXPr7-oZkk0HY6XOrlMbBF0LFc',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
