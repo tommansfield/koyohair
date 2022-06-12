@@ -27,12 +27,10 @@
   font-size: 1.5em;
 }
 
-/* .navbar-brand span {
-  letter-spacing: 0.8rem;
-} */
 
 .navbar-brand img {
   width: 5em;
+  margin: 10px 0 0 10px;
 }
 
 .green {
