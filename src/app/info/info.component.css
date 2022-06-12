@@ -9,7 +9,7 @@ a:hover {
 
 .darkened {
   overflow-y: scroll;
-  max-width: 90vw;
+  /* max-width: 70vw; */
 }
 
 .map-container {
@@ -18,15 +18,13 @@ a:hover {
 }
 
 .map {
+  margin-top: 10px;
   width: min(300px, 70vw);
   height: min(300px, 70vw);
 }
 
 /* Small */
 @media (max-width: 600px) {
-  h4 {
-    margin-top: 20px !important;
-  }
   .text {
     padding: 0;
   }

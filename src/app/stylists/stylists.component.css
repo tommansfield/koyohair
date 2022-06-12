@@ -5,18 +5,42 @@
   flex-wrap: wrap;
   justify-content: center;
   overflow-y: scroll;
+  margin-top: -10px;
 }
 
 .card {
-  width: min(90vw, 500px);
+  width: min(90vw, 400px);
+  height: 25em;
   margin: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
   border: none;
 }
 
 .card-body {
-  height: auto;
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dan-blakemore {
+  background-image:  url("../../assets/images/staff/dan-blakemore.jpg");
+}
+
+
+.lizzy {
+  background-image:  url("../../assets/images/staff/lizzy-brooks.jpg");
+}
+
+.owain {
+  background-image:  url("../../assets/images/staff/owain-barrett.jpg");
+}
+
+.dan-brooks {
+  background-image:  url("../../assets/images/staff/dan-brooks.jpg");
+}
+
+.abbie {
+  background-image:  url("../../assets/images/staff/abbie-dobinson.jpg");
 }
 
 .card-header {
@@ -24,7 +48,7 @@
 }
 
 .card-header > h4 {
-  color: var(--pink);
+  color: var(--orange);
 }
 
 .card img {
