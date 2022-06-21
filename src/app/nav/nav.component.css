@@ -1,7 +1,9 @@
 .navbar {
   height: 65px;
   position: relative;
-  margin: auto;
+  display: flex;
+  align-content: center;
+  /* margin: auto; */
 }
 
 .navbar-toggler {
@@ -23,14 +25,13 @@
 
 .navbar-brand {
   margin: 0 1rem;
-  padding-bottom: 0.5em;
   font-size: 1.5em;
 }
 
 
 .navbar-brand img {
   width: 5em;
-  margin: 10px 0 0 30px;
+  /* margin: 5px 0 0 10px; */
 }
 
 .green {
@@ -106,5 +107,8 @@
   }
   #social-small {
     display: flex;
+  }
+  .navbar-brand img {
+    margin: 0 0 0 15px;
   }
 }
