@@ -1,0 +1,14 @@
+.content {
+    position: relative;
+}
+
+.content > img {
+    max-width: min(30em, 90%);
+}
+
+.book-button {
+    position: absolute;
+    bottom: min(1em, 5px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
