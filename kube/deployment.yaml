@@ -59,7 +59,7 @@ spec:
     - web
   routes:
     - kind: Rule
-      match: HostRegexp(`{{URL}}`, `{{SUBDOMAIN}}.{{URL}}, koyo.tomdoesdev.com`)
+      match: HostRegexp(`{{URL}}`, `{{SUBDOMAIN}}.{{URL}}`, `koyo.tomdoesdev.com`)
       services:
         - name: "{{APP_NAME}}"
           port: 80
