@@ -5,9 +5,9 @@ stages:
   - deploy
 
 variables:
-  APP_NAME: "koyohair"
-  NAMESPACE: "sites"
-  URL: "koyohair.com"
+  APP_NAME: koyohair
+  NAMESPACE: sites
+  URL: koyohair.com
   SUBDOMAIN: "{subdomain:[a-z]+}"
 
 📚 Dependencies:
@@ -79,8 +79,8 @@ variables:
   - mv config ~/.kube/
   - echo "Preparing deployment.yaml..."
   - cd kube
-  - sed -i "s|{{APP_NAME}}|$APP_NAME|g" ./deployment.yaml
-  - sed -i "s|{{NAMESPACE}}|$NAMESPACE|g" ./deployment.yaml
+  - sed -i "s|'{{APP_NAME}}'|$APP_NAME|g" ./deployment.yaml
+  - sed -i "s|'{{NAMESPACE}}'|$NAMESPACE|g" ./deployment.yaml
   - sed -i "s|{{URL}}|$URL|g" ./deployment.yaml
   - sed -i "s|{{SUBDOMAIN}}|$SUBDOMAIN|g" ./deployment.yaml
   - cat ./deployment.yaml
