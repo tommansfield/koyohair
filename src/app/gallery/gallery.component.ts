@@ -22,6 +22,19 @@ export class GalleryComponent implements OnInit {
   }
 
   public fadeInImage(element: HTMLElement): void {
-    setTimeout(() => element.removeAttribute('loading'), 200);
+    setTimeout(() => {
+      element.removeAttribute('loading'), 200;
+    });
+  }
+
+  public fadeInVideo(element: HTMLElement): void {
+    setTimeout(() => {
+      console.log('video fadein');
+      element.removeAttribute('loading'), 200;
+    });
+  }
+
+  public isVideo(image: string) {
+    return image.startsWith('https://video');
   }
 }

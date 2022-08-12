@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "koyohair"
+  "defaultProject": "koyohair",
+  "cli": {
+    "analytics": false
+  }
 }

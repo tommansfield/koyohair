@@ -1,12 +1,23 @@
 <div class="content">
   <h1>Gallery</h1>
   <div *ngIf="images" class="flex-container">
-    <img
-      #imageTag
-      *ngFor="let image of images"
-      [src]="image"
-      loading="lazy"
-      (load)="fadeInImage(imageTag)"
-    />
+    <div class="image-container" *ngFor="let image of images">
+      <img
+        #imageTag
+        *ngIf="!isVideo(image)"
+        [src]="image"
+        loading="lazy"
+        (load)="fadeInImage(imageTag)"
+      />
+      <video
+        controls
+        #videoTag
+        preload="metadata"
+        *ngIf="isVideo(image)"
+        [src]="image"
+        loading="lazy"
+        (loadedmetadata)="fadeInVideo(videoTag)"
+      ></video>
+    </div>
   </div>
 </div>

@@ -11,7 +11,7 @@
   margin-top: -10px;
 }
 
-.flex-container img {
+.flex-container img, video {
   object-fit: cover;
   min-height: 350px;
   width: 350px;
@@ -19,12 +19,18 @@
   margin: 15px;
 }
 
-img {
+.image-container {
+  padding: 0;
+  margin: 0;
+  width: min(90vw, 500px);
+}
+
+img, video {
   opacity: 1;
   transition: opacity 1s;
 }
 
-img[loading] {
+img[loading], video[loading] {
   opacity: 0;
 }
 
@@ -34,7 +40,7 @@ img[loading] {
     padding: 0;
   }
   .flex-container img {
-    width: 90%;
+    width: 100%;
     max-width: 350px;
     height: auto;
     margin: 15px 0;

@@ -10,8 +10,8 @@ import { StylistsComponent } from './stylists/stylists.component';
 import { PricesComponent } from './prices/prices.component';
 import { ColourComponent } from './colour/colour.component';
 import { InfoComponent } from './info/info.component';
-import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { AgmCoreModule } from '@agm/core';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -28,9 +28,8 @@ import { AgmCoreModule } from '@agm/core';
     BrowserModule,
     RoutingModule,
     HttpClientModule,
-    LazyLoadImageModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyChU4JDZXXPr7-oZkk0HY6XOrlMbBF0LFc',
+      apiKey: environment.googleMapsKey,
     }),
   ],
   providers: [],
