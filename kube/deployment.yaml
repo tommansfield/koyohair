@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: "{{APP_NAME}}"
-          image: snapshots.tomdoesdev/'{{APP_NAME}}':latest
+          image: snapshots.tomdoesdev/{{APP_NAME}}:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
