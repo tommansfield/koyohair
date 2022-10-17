@@ -75,4 +75,7 @@
   .text {
     margin-bottom: 30px;
   }
+  .flex-container {
+    padding: 0;
+  }
 }
