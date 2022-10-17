@@ -18,6 +18,7 @@ export class ImageService implements OnInit {
       .set('fields', 'media_url')
       .set('access_token', accessToken);
     const url = `${baseURL}?${params.toString()}`;
+    console.log(url);
     return this.http.get<any>(url).pipe(first());
   }
 }
