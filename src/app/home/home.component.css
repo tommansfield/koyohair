@@ -1,16 +1,20 @@
 .flex-container {
-  height: calc(100vh - 65px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   overflow: hidden;
+  padding: 0;
 }
 
-h1 {
-  color: white;
-  font-size: 10em;
-  margin-top: 150px;
+.logo-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.koyo-logo {
+  width: 700px;
+  max-width: 70%;
 }
 
 .wide {
@@ -24,25 +28,21 @@ h1 {
   font-weight: 600;
   letter-spacing: 0.2rem;
   padding: 0 20px;
-  margin: 20px 0;
+  margin: 40px 0;
   text-align: center;
 }
 
-/* Medium */
-@media (max-width: 940px) {
-  h1 {
-    font-size: 18vw;
-  }
-  .wide {
-    letter-spacing: 9vw;
-  }
-  .blurb {
-    font-size: 3.2vw;
-  }
-}
 
 /* Small */
 @media (max-width: 600px) {
+  .flex-container {
+      justify-content: center;
+      margin-top: 40px;
+    }
+  .logo-container {
+    text-align: center;
+    margin-top: 0px;
+  }
   .blurb {
     font-size: 1.5em;
     padding: 0 10px;

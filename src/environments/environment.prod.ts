@@ -6,6 +6,6 @@ export const environment = {
   facebookUrl: 'https://www.facebook.com/koyohairtruro',
   instagramApiUrl: 'https://graph.instagram.com/me/media',
   instagramApiToken:
-    'IGQVJYMjBZAajRQRjQ4a2RZARllHcU56bXNLRzR0NWVYXzU4eGhLOWZAQMHFEVUFqemVpOFR3OTZA2dkxkS05KUjlCWHhWa3N2Y2F3UTZAhWndyZAHRVc1BkQ0R0MEcxalVELTlPOHdLZAkRGYzF2OFo5YllwcwZDZD',
+    'IGQVJWRnY1a0FnUlgzNXBja05iQmhyS1VBZAFNMZA0ZAtOG92ejBZAWkV2ZAktGMkJ2eDBUVDZAFOEh2RzJuVk15S0hLUWhEckdmMnM1ZAkhHeDZAfbFA4R1hkbFhBNUFGQlUzeDRJaGNPa3N3WlcyWjA2QWs1OQZDZD',
   googleMapsKey: 'AIzaSyChU4JDZXXPr7-oZkk0HY6XOrlMbBF0LFc',
 };

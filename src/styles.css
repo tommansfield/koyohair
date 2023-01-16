@@ -6,7 +6,7 @@
   --blue: #69c9ff;
   --green: #73ffd1;
   --orange: #ffc373;
-  --pink: #ffc3df;
+  --pink: #ffdfee;
 }
 
 * {
@@ -95,7 +95,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: calc(100vh - 68px);
   padding: 0 50px;
   overflow-y: scroll;
   z-index: -1;

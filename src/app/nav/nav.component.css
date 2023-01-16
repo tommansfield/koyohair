@@ -1,9 +1,9 @@
 .navbar {
-  height: 65px;
+  height: 68px;
   position: relative;
   display: flex;
   align-content: center;
-  /* margin: auto; */
+  margin: auto;
 }
 
 .navbar-toggler {
@@ -24,14 +24,14 @@
 }
 
 .navbar-brand {
+  position: relative;
   margin: 0 1rem;
   font-size: 1.5em;
 }
 
 
 .navbar-brand img {
-  width: 5em;
-  /* margin: 5px 0 0 10px; */
+  width: 3em;
 }
 
 .green {
@@ -109,6 +109,6 @@
     display: flex;
   }
   .navbar-brand img {
-    margin: 0 0 0 15px;
+    margin: 0 0 0 30px;
   }
 }
