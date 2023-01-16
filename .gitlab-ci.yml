@@ -83,7 +83,6 @@ variables:
   - sed -i "s|{{NAMESPACE}}|$NAMESPACE|g" ./deployment.yaml
   - sed -i "s|{{URL}}|$URL|g" ./deployment.yaml
   - sed -i "s|{{SUBDOMAIN}}|$SUBDOMAIN|g" ./deployment.yaml
-  - cat ./deployment.yaml
   - echo "Deployment prepared."
   script:
     - echo "Deploying application..."
