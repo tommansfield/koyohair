@@ -1,5 +1,5 @@
 .flex-container {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 a {
@@ -11,10 +11,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.darkened {
-  overflow-y: scroll;
-  /* max-width: 70vw; */
-}
 
 .map-container {
   display: flex;
@@ -29,6 +25,9 @@ a:hover {
 
 /* Small */
 @media (max-width: 600px) {
+  .darkened {
+    overflow-y: scroll;
+  }
   .text {
     padding: 0;
   }

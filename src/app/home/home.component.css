@@ -36,9 +36,9 @@
 /* Small */
 @media (max-width: 600px) {
   .flex-container {
-      justify-content: center;
-      margin-top: 40px;
-    }
+    justify-content: center;
+    margin-top: 40px;
+  }
   .logo-container {
     text-align: center;
     margin-top: 0px;

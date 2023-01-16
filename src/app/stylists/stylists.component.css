@@ -1,5 +1,6 @@
 .flex-container {
   overflow-y: hidden;
+  height: auto;
 }
 
 .card {

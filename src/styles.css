@@ -95,7 +95,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 68px);
+  height: 80vh;
   padding: 0 50px;
   overflow-y: scroll;
   z-index: -1;
