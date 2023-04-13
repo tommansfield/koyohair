@@ -1,7 +1,4 @@
-.flex-container {
-  overflow-y: hidden;
-  height: auto;
-}
+
 
 .card {
   width: min(90vw, 400px);
