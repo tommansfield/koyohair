@@ -26,7 +26,7 @@ variables:
     paths:
       - node_modules
 
-🔨 Build: 
+🔨 Build:
   stage: build
   image: node:12-alpine
   script:
@@ -70,20 +70,20 @@ variables:
 
 🚀 Deploy:
   stage: deploy
-  image: 
+  image:
     name: aliartiza75/kubectl:0.0.2
-    entrypoint: [""]
+    entrypoint: [ "" ]
   before_script:
-  - mkdir ~/.kube/
-  - echo $KUBE_CONFIG | base64 -d > config
-  - mv config ~/.kube/
-  - echo "Preparing deployment.yaml..."
-  - cd kube
-  - sed -i "s|{{APP_NAME}}|$APP_NAME|g" ./deployment.yaml
-  - sed -i "s|{{NAMESPACE}}|$NAMESPACE|g" ./deployment.yaml
-  - sed -i "s|{{URL}}|$URL|g" ./deployment.yaml
-  - sed -i "s|{{SUBDOMAIN}}|$SUBDOMAIN|g" ./deployment.yaml
-  - echo "Deployment prepared."
+    - mkdir ~/.kube/
+    - echo $KUBE_CONFIG | base64 -d > config
+    - mv config ~/.kube/
+    - echo "Preparing deployment.yaml..."
+    - cd kube
+    - sed -i "s|{{APP_NAME}}|$APP_NAME|g" ./deployment.yaml
+    - sed -i "s|{{NAMESPACE}}|$NAMESPACE|g" ./deployment.yaml
+    - sed -i "s|{{URL}}|$URL|g" ./deployment.yaml
+    - sed -i "s|{{SUBDOMAIN}}|$SUBDOMAIN|g" ./deployment.yaml
+    - echo "Deployment prepared."
   script:
     - echo "Deploying application..."
     - '[ -z "$(kubectl get namespaces | grep $NAMESPACE)" ] && kubectl create namespace ${NAMESPACE}'

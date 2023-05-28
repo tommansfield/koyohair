@@ -39,10 +39,12 @@
     justify-content: center;
     margin-top: 40px;
   }
+
   .logo-container {
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0;
   }
+
   .blurb {
     font-size: 1.5em;
     padding: 0 10px;

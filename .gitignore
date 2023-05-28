@@ -43,3 +43,4 @@ testem.log
 Thumbs.db
 .browserslistrc
 .editorconfig
+/.run/Koyohair.run.xml

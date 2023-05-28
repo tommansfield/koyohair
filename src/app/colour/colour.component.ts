@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnDestroy,
-  ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild, } from '@angular/core';
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
 
 @Component({
@@ -30,9 +24,11 @@ export class ColourComponent implements AfterViewInit, OnDestroy {
         (slider) => {
           let timeout: any;
           let mouseOver = false;
+
           function clearNextTimeout() {
             clearTimeout(timeout);
           }
+
           function nextTimeout() {
             clearTimeout(timeout);
             if (mouseOver) return;
@@ -40,6 +36,7 @@ export class ColourComponent implements AfterViewInit, OnDestroy {
               slider.next();
             }, 3000);
           }
+
           slider.on('created', () => {
             slider.container.addEventListener('mouseover', () => {
               mouseOver = true;

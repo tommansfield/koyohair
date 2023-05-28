@@ -1,9 +1,7 @@
 
-
 .card {
   width: min(90vw, 400px);
   height: 20em;
-  width: 20em;;
   margin: 20px;
   border: none;
 }
@@ -16,24 +14,24 @@
 }
 
 .dan-blakemore {
-  background-image:  url("../../assets/images/staff/dan-blakemore.jpg");
+  background-image: url("../../assets/images/staff/dan-blakemore.jpg");
 }
 
 
 .lizzy {
-  background-image:  url("../../assets/images/staff/lizzy-brooks.jpg");
+  background-image: url("../../assets/images/staff/lizzy-brooks.jpg");
 }
 
 .owain {
-  background-image:  url("../../assets/images/staff/owain-barrett.jpg");
+  background-image: url("../../assets/images/staff/owain-barrett.jpg");
 }
 
 .dan-brooks {
-  background-image:  url("../../assets/images/staff/dan-brooks.jpg");
+  background-image: url("../../assets/images/staff/dan-brooks.jpg");
 }
 
 .abbie {
-  background-image:  url("../../assets/images/staff/abbie-dobinson.jpg");
+  background-image: url("../../assets/images/staff/abbie-dobinson.jpg");
 }
 
 .card-header {
@@ -78,6 +76,7 @@
   .text {
     margin-bottom: 30px;
   }
+
   .flex-container {
     padding: 0;
   }

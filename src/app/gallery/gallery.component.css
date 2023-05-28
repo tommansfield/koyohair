@@ -26,6 +26,7 @@ img[loading], video[loading] {
   .flex-container {
     padding: 0;
   }
+
   .flex-container img, .flex-container video {
     width: 100%;
     max-width: 350px;

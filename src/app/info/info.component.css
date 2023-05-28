@@ -28,9 +28,11 @@ a:hover {
   .darkened {
     overflow-y: scroll;
   }
+
   .text {
     padding: 0;
   }
+
   .last {
     margin-top: 30px !important;
   }

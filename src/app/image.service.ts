@@ -1,15 +1,14 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { first, Observable } from 'rxjs';
 import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ImageService implements OnInit {
-  constructor(private http: HttpClient) {}
-
-  public ngOnInit(): void {}
+export class ImageService {
+  constructor(private http: HttpClient) {
+  }
 
   public getImages(): Observable<any> {
     const baseURL = environment.instagramApiUrl;

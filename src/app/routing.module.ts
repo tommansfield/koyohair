@@ -9,13 +9,13 @@ import { ColourComponent } from './colour/colour.component';
 import { InfoComponent } from './info/info.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'gallery', component: GalleryComponent },
-  { path: 'stylists', component: StylistsComponent },
-  { path: 'prices', component: PricesComponent },
-  { path: 'colour', component: ColourComponent },
-  { path: 'info', component: InfoComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: 'home', component: HomeComponent},
+  {path: 'gallery', component: GalleryComponent},
+  {path: 'stylists', component: StylistsComponent},
+  {path: 'prices', component: PricesComponent},
+  {path: 'colour', component: ColourComponent},
+  {path: 'info', component: InfoComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 
 @NgModule({
@@ -23,4 +23,5 @@ const routes: Routes = [
   imports: [CommonModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class RoutingModule {}
+export class RoutingModule {
+}
